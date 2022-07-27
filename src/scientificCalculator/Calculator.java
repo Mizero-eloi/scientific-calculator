@@ -18,7 +18,6 @@ public class Calculator {
         Operand num2 = new Operand(0);
         Operator operator = new Operator();
 
-        int res = 0;
 
         int option = -1;
         while(option != 0){
@@ -40,29 +39,27 @@ public class Calculator {
             System.out.println("Enter 2nd number: ");
             num2.setNum(scanner.nextInt());
 
+            Result result = new Result();
+
 
             switch (option){
                 case 1:
-                    res = operator.add(num1.getNum(), num2.getNum());
+                    result.setResult(operator.add(num1.getNum(), num2.getNum()));
                     break;
                 case 2:
-                    res = operator.subtract(num1.getNum(), num2.getNum());
+                    result.setResult(operator.subtract(num1.getNum(), num2.getNum()));
                     break;
                 case 3:
-                    res = operator.multiply(num1.getNum(), num2.getNum());
+                    result.setResult(operator.multiply(num1.getNum(), num2.getNum()));
                     break;
                 case 4:
-                    res = (int) operator.divide(num1.getNum(), num2.getNum());
+                    result.setResult(operator.divide(num1.getNum(), num2.getNum()));
                     break;
 
             }
 
             // Result
-            Result result = new Result();
-            result.setResult(res);
             System.out.println("Result : " + result.getResult());
-
-
 
 
         }
