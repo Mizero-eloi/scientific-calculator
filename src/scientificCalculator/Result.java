@@ -1,13 +1,13 @@
 package src.scientificCalculator;
 
 public class Result {
-    private int result;
+    private Object result;
 
-    public int getResult() {
+    public Object getResult() {
         return result;
     }
 
-    public void setResult(int result) {
+    public void setResult(Object result) {
         this.result = result;
     }
 }
